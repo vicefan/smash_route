@@ -74,7 +74,7 @@ if st.button("Find Path"):
         path = find_win_path(win_graph, start_player, end_player)
         if path:
             result = ' -> '.join(path)
-            st.code(result, language="python")
+            st.code(result, language="python", wrap_lines=True)
         else:
             st.error("No path found between the players.")
     else:
