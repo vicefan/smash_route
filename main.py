@@ -70,7 +70,7 @@ with cols[1]:
 
 # 경로 찾기 버튼
 if st.button("Find Path"):
-    if start_player and end_player:
+    if start_player and end_player and start_player != end_player:
         path = find_win_path(win_graph, start_player, end_player)
         if path:
             result = ' -> '.join(path)
