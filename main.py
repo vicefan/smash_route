@@ -1,7 +1,6 @@
 import json
 import heapq
 import streamlit as st
-import paperclip
 
 # 데이터 로드
 with open("./match_history/data.json", "r", encoding="utf-8") as f:
