@@ -1,7 +1,7 @@
 import json
 import heapq
 import streamlit as st
-import clipboard
+import paperclip
 
 # 데이터 로드
 with open("./match_history/data.json", "r", encoding="utf-8") as f:
@@ -74,11 +74,8 @@ if st.button("Find Path"):
     if start_player and end_player:
         path = find_win_path(win_graph, start_player, end_player)
         if path:
-            st.success(' -> '.join(path))
-            st.write()
-            clip = st.button("Copy to Clipboard", key="copy_button", on_click=lambda: clipboard.copy(' -> '.join(path)))
-            if clip:
-                st.success("Path copied to clipboard!")
+            result = ' -> '.join(path)
+            st.code(result, language="python")
         else:
             st.error("No path found between the players.")
     else:
