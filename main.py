@@ -1,7 +1,6 @@
 import json
 import heapq
 import streamlit as st
-from st_keyup import st_keyup
 import clipboard
 
 # 데이터 로드
